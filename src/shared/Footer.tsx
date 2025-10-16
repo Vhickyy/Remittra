@@ -2,7 +2,7 @@ import { footerLinks, socialLinks } from "../data";
 
 export function Footer() {
   return (
-    <footer className="border-t border-t-primary border-border bg-card px-6 py-4">
+    <footer className="border-t border-t-primary border-border bg-card px-6 py-4 font-poppins">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo */}

@@ -4,7 +4,7 @@ import Button from "../../../ui/Button";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-primary px-6 py-20 md:py-32 lg:py-40">
+    <section className="relative overflow-hidden bg-primary px-6 py-20 md:py-32 lg:py-40 font-poppins">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
