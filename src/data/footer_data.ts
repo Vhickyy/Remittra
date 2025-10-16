@@ -1,4 +1,4 @@
-import { InstagramIcon, Linkedin, TwitterIcon, X } from "lucide-react";
+import { InstagramIcon, Linkedin, TwitterIcon } from "lucide-react";
 
 export const footerLinks = [
   { label: "About", href: "#" },
