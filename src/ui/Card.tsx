@@ -1,4 +1,6 @@
-const Card = ({ title, icon, description, index }: any) => {
+import type { FeatureCardProps } from "../views/home_view/home_types";
+
+const Card = ({ title, icon, description, index = 0 }: FeatureCardProps) => {
   return (
     <div
       className="bg-white custom-shadow rounded-xl py-8 px-4 flex flex-col justify-between gap-4 hover:scale-105 transition-transform duration-300 ease-in-out"

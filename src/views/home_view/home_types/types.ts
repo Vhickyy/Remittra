@@ -4,4 +4,5 @@ export interface FeatureCardProps {
   icon: ReactNode;
   title: string;
   description: string;
+  index?: number;
 }
