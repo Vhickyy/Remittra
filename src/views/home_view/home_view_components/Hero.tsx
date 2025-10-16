@@ -15,7 +15,7 @@ const Hero = () => {
             Now Available Worldwide
           </div>
 
-          <h1 className="mb-6 max-w-4xl text-balance text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 max-w-4xl text-balance text-3xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             Your All-in-One Multi-Currency Wallet
           </h1>
 
@@ -24,7 +24,7 @@ const Hero = () => {
             savings groups, create virtual cards, and transfer funds instantly.
           </p>
 
-          <div className="flex flex-col gap-4 sm:flex-row">
+          <div className="flex gap-4 flex-row">
             <Button text="Get Started Free" icon="" />
 
             {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
