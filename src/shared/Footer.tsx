@@ -2,7 +2,7 @@ import { footerLinks, socialLinks } from "../data";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card px-6 py-4">
+    <footer className="border-t border-t-[#00BFFF] border-border bg-card px-6 py-4">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo */}
@@ -45,7 +45,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-border pt-8 text-center">
+        <div className="mt-8 border-t border-border pt-4 text-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Remittra. All rights reserved.
           </p>

@@ -8,7 +8,7 @@ export function Features() {
         <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl text-[#00BFFF]">
           Everything you need in one app
         </h2>
-        <p className="mx-auto max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        <p className="mx-auto max-w-2xl text-pretty text-base md:text-lg leading-relaxed text-muted-foreground">
           Powerful features designed to make managing your money simple, secure,
           and accessible from anywhere.
         </p>

@@ -19,7 +19,7 @@ const Hero = () => {
             Your All-in-One Multi-Currency Wallet
           </h1>
 
-          <p className="mb-8 max-w-[42rem] text-pretty text-lg leading-relaxed text-white/90 md:text-xl">
+          <p className="mb-8 max-w-[42rem] text-pretty text-base leading-relaxed text-white/90 md:text-xl">
             Send, receive, and manage money across borders with ease. Join
             savings groups, create virtual cards, and transfer funds instantly.
           </p>
