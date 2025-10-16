@@ -34,8 +34,6 @@ export function Footer() {
               <a
                 key={social.label}
                 href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:text-[#00BFFF]"
                 aria-label={social.label}
               >
