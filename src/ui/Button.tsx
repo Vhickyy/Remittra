@@ -2,7 +2,11 @@ import { type ReactNode } from "react";
 
 const Button = ({ text, icon }: { text: string; icon?: ReactNode }) => {
   return (
-    <button className="group bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-200 shadow-lg py-2 px-6 rounded-xl cursor-pointer text-sm">
+    <button
+      className="group bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-200 shadow-lg py-2 px-6 rounded-xl cursor-pointer text-sm"
+      data-aos="fade-up"
+      data-aos-delay="700"
+    >
       {text} {icon}
     </button>
   );

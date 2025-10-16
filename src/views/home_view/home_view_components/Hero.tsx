@@ -15,11 +15,18 @@ const Hero = () => {
             Now Available Worldwide
           </div>
 
-          <h1 className="mb-6 max-w-4xl text-balance text-3xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h1
+            className="mb-6 max-w-4xl text-balance text-3xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl"
+            data-aos="fade-up"
+          >
             Your All-in-One Multi-Currency Wallet
           </h1>
 
-          <p className="mb-8 max-w-[42rem] text-pretty text-base leading-relaxed text-white/90 md:text-xl">
+          <p
+            className="mb-8 max-w-[42rem] text-pretty text-base leading-relaxed text-white/90 md:text-xl"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             Send, receive, and manage money across borders with ease. Join
             savings groups, create virtual cards, and transfer funds instantly.
           </p>
@@ -29,7 +36,7 @@ const Hero = () => {
 
             {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button> */}
-            <Button text="Watch Demo" icon="" />
+            <Button text="Watch Demo" icon="" data-aos="fade-up" />
           </div>
         </div>
       </div>
