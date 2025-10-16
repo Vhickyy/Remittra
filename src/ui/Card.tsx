@@ -6,7 +6,7 @@ const Card = ({ title, icon, description, index }: any) => {
       data-aos-delay={index * 100}
     >
       <div className="flex gap-4 items-center">
-        {icon} <h3 className="text-[#00BFFF] font-semibold">{title}</h3>
+        {icon} <h3 className="text-primary font-semibold">{title}</h3>
       </div>
       <p className="flex-1">{description}</p>
     </div>

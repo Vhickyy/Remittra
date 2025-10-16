@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #00bfff;
+}
+
 @layer components {
   .containerclass {
     @apply w-[90%] mx-auto max-w-[1200px];
