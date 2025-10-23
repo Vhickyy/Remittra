@@ -20,6 +20,9 @@ const Ajo_View = () => {
       setAjos(data);
       setFilter(data);
     }
+    if (error) {
+      alert(error.message);
+    }
   };
 
   const filterUserAjos = () => {

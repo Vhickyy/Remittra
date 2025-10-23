@@ -3,7 +3,7 @@ import Sidebar from "../shared/Sidebar";
 import { useGlobalContext } from "../context/GlobalContext";
 
 const DashboardLayout = () => {
-  const { session, sessionLoading, user } = useGlobalContext();
+  const { session, sessionLoading } = useGlobalContext();
   if (sessionLoading) {
     return <p>Loading</p>;
   }

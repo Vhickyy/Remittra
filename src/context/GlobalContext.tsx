@@ -47,21 +47,23 @@ const GlobalContextProvider = ({ children }: GlobalProviderProps) => {
           .select("*")
           .eq("user_id", data?.user?.id)
           .single();
-        if (dataBalance.balance || dataBalance.balance == 0) {
+        if (dataBalance?.balance || dataBalance.balance == 0) {
           setUserBalance((pre) => ({
             ...pre,
             balance: Number(dataBalance.balance),
             walletId: dataBalance.id,
           }));
         } else {
-          const { data: walletId, error } = await supabase
+          const { data: walletData, error } = await supabase
             .from("wallet")
-            .insert({ user_id: data?.user?.id, balance: 0 });
-          if (walletId) {
+            .insert({ user_id: data?.user?.id, balance: 0 })
+            .select();
+
+          if (walletData) {
             setUserBalance((pre) => ({
               ...pre,
               balance: 0,
-              walletId: walletId?.id,
+              walletId: walletData[0].id,
             }));
           } else {
             alert(error?.message);
@@ -79,6 +81,8 @@ const GlobalContextProvider = ({ children }: GlobalProviderProps) => {
     } = supabase.auth.onAuthStateChange((_event, newSession) => {
       setSession(newSession);
     });
+
+    console.log({ userBalance });
 
     return () => {
       subscription.unsubscribe();
