@@ -3,6 +3,9 @@ import Home from "./pages/Home";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BrowserRouter } from "react-router-dom";
+import App_Router from "./router/App_Router";
+import { GlobalContextProvider } from "./context/GlobalContext";
 
 function App() {
   useEffect(() => {
@@ -29,7 +32,13 @@ function App() {
     };
   }, []);
 
-  return <Home />;
+  return (
+    <GlobalContextProvider>
+      <BrowserRouter>
+        <App_Router />
+      </BrowserRouter>
+    </GlobalContextProvider>
+  );
 }
 
 export default App;
