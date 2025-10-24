@@ -3,6 +3,8 @@ import { useGlobalContext } from "../../../context/GlobalContext";
 
 const Dashboard_View = () => {
   const { user } = useGlobalContext();
+  console.log({ user });
+
   return (
     <section className="px-4 flex flex-col justify-center items-center min-h-screen">
       <h2>Dashboard</h2>

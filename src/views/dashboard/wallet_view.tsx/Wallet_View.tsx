@@ -31,11 +31,15 @@ const Wallet_View = () => {
   };
 
   const withdraw = async () => {
-    const newBalance = Number(userBalance.balance) - Number(amount);
     if (!amount) {
       alert("Amount is required and must be greater than 0");
       return;
     }
+    if (Number(amount) > Number(userBalance.balance)) {
+      alert("Insufficient fund");
+      return;
+    }
+    const newBalance = Number(userBalance.balance) - Number(amount);
     setLoading(true);
     const { error } = await supabase
       .from("wallet")

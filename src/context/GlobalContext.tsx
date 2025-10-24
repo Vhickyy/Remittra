@@ -42,12 +42,16 @@ const GlobalContextProvider = ({ children }: GlobalProviderProps) => {
       const { data } = await supabase.auth.getUser();
       if (data) {
         setUser(data.user);
-        const { data: dataBalance } = await supabase
+        const { data: dataBalance, error } = await supabase
           .from("wallet")
           .select("*")
           .eq("user_id", data?.user?.id)
-          .single();
-        if (dataBalance?.balance || dataBalance.balance == 0) {
+          .maybeSingle();
+        console.log({ dataBalance, error });
+
+        if (dataBalance?.balance || dataBalance?.balance == 0) {
+          console.log("jjj");
+
           setUserBalance((pre) => ({
             ...pre,
             balance: Number(dataBalance.balance),

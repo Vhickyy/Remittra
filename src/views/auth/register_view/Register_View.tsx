@@ -21,10 +21,10 @@ const Register_View = () => {
     const { error } = await supabase.auth.signUp({
       email: formDetail.email,
       password: formDetail.password,
-
       options: {
         data: {
           fullname: formDetail.fullname,
+          role: "admin",
         },
       },
     });
