@@ -2,8 +2,10 @@ import Auth_Layout from "../auth_components/Auth_Layout";
 import Input from "../../../components/Input";
 import { useState } from "react";
 import supabase from "../../../supabase-client";
+import { useNavigate } from "react-router-dom";
 
 const Register_View = () => {
+  const navigate = useNavigate();
   const [formDetail, setFormDetail] = useState({
     email: "",
     password: "",
@@ -24,13 +26,13 @@ const Register_View = () => {
       options: {
         data: {
           fullname: formDetail.fullname,
-          role: "admin",
         },
       },
     });
     if (!error) {
-      alert("Check your email for verification link");
+      alert("You have been authenticated, Please Log in");
       setLoading(true);
+      navigate("/auth/login");
     } else {
       alert(error.message);
       setLoading(true);

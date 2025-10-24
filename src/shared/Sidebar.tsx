@@ -1,10 +1,10 @@
 import { LogOut } from "lucide-react";
 import { Link } from "react-router-dom";
 import supabase from "../supabase-client";
-import { useGlobalContext } from "../context/GlobalContext";
+// import { useGlobalContext } from "../context/GlobalContext";
 
 const Sidebar = () => {
-  const { user } = useGlobalContext();
+  // const { user } = useGlobalContext();
   const side_nav = [
     {
       name: "Dashboard",
@@ -32,9 +32,9 @@ const Sidebar = () => {
       <div className="overflow-y-auto flex-1 px-6 py-2">
         <div className="text-white flex gap-4 flex-col mt-6">
           {side_nav.map((nav, index) => {
-            if (nav.name === "Admin" && user?.user_metadata?.role !== "admin") {
-              return null;
-            }
+            // if (nav.name === "Admin" && user?.user_metadata?.role !== "admin") {
+            //   return null;
+            // }
 
             return (
               <div
